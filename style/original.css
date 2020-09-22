@@ -1,0 +1,267 @@
+:root {
+    --bgdark: #377F1F;
+    --bglight: #5CA345;
+    --background: #FFF;
+    --textcolor: #FFF;
+    --contentblockcolor: #333633;
+    --pbgdark: #155D0D;
+    --pbglight: #3A8123;
+}
+
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: "Tahoma";
+}
+.menu {
+    font-size: 16pt;
+    height: 60px;
+    background-color: var(--bglight);
+    border: 0px solid transparent;
+    border-bottom: 19px solid var(--bgdark);
+    color: var(--textcolor);
+}
+.menu_text {
+    font-size: 14px;
+    position: relative;
+    width: 95%;
+    top: -8px;
+    left: 5%;
+}
+.idtitle {
+    font-size: 8pt;
+}
+a {
+    text-decoration: none;
+    color: var(--bgdark);
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: underline;
+    color: var(--bgdark);
+}
+.menu a {
+    text-decoration: none;
+    color: var(--background);
+    text-shadow: 0px 0px 1px #000;
+}
+.menu a:link, .menu a:visited, .menu a:hover, .menu a:active {
+    text-decoration: none;
+    text-shadow: 0px 0px 1px #000;
+}
+.container {
+    /*background-color: #ccc;*/
+    width: 100%;
+    min-height: 10%;
+}
+hr {
+    width: 98%;
+    color: rgba(0,0,0,0.3);
+    height: -1px;
+}
+.progress_bg {
+    width: 200px;
+    height: 7px;
+    border: 1px solid rgba(20,20,20,0.5);
+    border-radius: 20px;
+}
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #cccc00, #99cc00);
+    border-radius: 20px;
+}
+
+
+
+.ticket {
+    background-color: var(--background);
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 80%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin-top: 10pt;
+    font-size: 11pt;
+    color: var(--contentblockcolor)
+}
+.ticket_title{
+    font-size: 12pt;
+    width: 100%;
+    background-color: var(--bglight);
+    border-bottom: 3px solid var(--bgdark);
+    color: var(--textcolor);
+    border-radius: 2px 2px 0px 0px;
+}
+
+.project {
+    background-color: var(--background);
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 90%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin-top: 10pt;
+    font-size: 11pt;
+    color: var(--contentblockcolor)
+}
+.project_title{
+    font-size: 12pt;
+    width: 100%;
+    background-color: var(--pbglight);
+    border-bottom: 3px solid var(--pbgdark);
+    color: var(--textcolor);
+    border-radius: 2px 2px 0px 0px;
+}
+.ticket_form {
+    background-color: var(--background);
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 85%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin-top: 10pt;
+    font-size: 11pt;
+    color: var(--contentblockcolor)
+}
+.ticket_form_title{
+    font-size: 12pt;
+    width: 100%;
+    background-color: var(--bglight);
+    border-bottom: 3px solid var(--bgdark);
+    color: var(--textcolor);
+    border-radius: 2px 2px 0px 0px;
+}
+
+.ticket_form input, .ticket_form table, .ticket_form textarea {
+    width: 98%;
+    resize: none;
+}
+.tickettext {
+    height: 250px;
+}
+.closed_ticket_title {
+    font-size: 12pt;
+    width: 100%;
+    background-color: rgba(110,110,90,1);
+    border-bottom: 3px solid rgba(90,90,70,1);
+    color: var(--textcolor);
+    border-radius: 2px 2px 0px 0px;
+}
+.closed_ticket {
+    background-color: var(--background);
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 80%;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    margin-top: 10pt;
+    font-size: 11pt;
+    color: var(--contentblockcolor)
+}
+.closed {
+    background-color: rgba(110,110,90,1);
+    border-bottom: 3px solid rgba(90,90,70,1);
+    color: var(--textcolor);
+}
+.ticket_form td {
+    vertical-align: top;
+    text-align: left;
+}
+.freeheader {
+    width: 100%;
+    text-align: center;
+    color: var(--bgdark);
+}
+.code {
+    background-color: #CCC;
+}
+#input {
+    background-color: var(--background);
+    border: 1px solid #EEE;
+    border-radius: 2px;
+}
+#input:focus {
+    background-color: #EFE;
+    border: 1px solid var(--bgdark);
+    border-radius: 2px;
+}
+#input:hover {
+    background-color: #EFE;
+    border-radius: 2px;
+}
+.error {
+    width: 50%;
+    background-color: rgba(255,150,20,0.5);
+    border: 3px solid rgba(255,20,20,0.5);
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20pt;
+}
+.linktitle {
+    width: 100%;
+    display: block;
+    background-color: var(--bglight);
+    color: #FFF;
+}
+.linktitle a, 
+.linktitle a:hover, 
+.linktitle a:focus, 
+.linktitle a:active {
+    color: #FFF;
+}
+.listitem {
+    width: 60%;
+    background-color: var(--background);
+    border: 1px solid var(--bglight);
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 20pt;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    color: #777;
+}
+
+
+.menu a{
+    border: 0px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bgdark);
+    color: var(--textcolor) ;
+    margin-right: 20px;
+}
+.menu a:hover {
+    border: 0px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bglight);
+    color: var(--textcolor);
+}
+
+
+button {
+    cursor: pointer;
+    border: 0px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bgdark);
+    color: var(--textcolor) ;
+}
+button:hover {
+    border: 0px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bglight);
+    color: var(--textcolor);
+}
+
+.button {
+    border: 0px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bgdark);
+    color: var(--textcolor) ;
+}
+.button:hover {
+    border: 0px solid transparent;
+    border-radius: 2px;
+    background-color: var(--bglight);
+    color: var(--textcolor);
+}
