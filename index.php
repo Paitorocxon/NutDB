@@ -1,4 +1,9 @@
 <?php
+header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Datum der Vergangenheit
+header ("Last-Modified: " . gmdate ("D, d M Y H:i:s") . " GMT"); // immer geändert
+header ("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header ("Pragma: no-cache");
+
 session_start();
 require_once("config.php");
 require_once("grab.php");
@@ -8,6 +13,7 @@ require_once("grab.php");
 head(); //Head stuff like html and so on
 echo '  <body>' . "\n";
 menu();
+echo '  <div class="box">'. "\n";
 //==========CONTENT============
 
 if (isset($_REQUEST['projecttitle']) && isset($_REQUEST['projectdescription'])){
@@ -16,7 +22,7 @@ if (isset($_REQUEST['projecttitle']) && isset($_REQUEST['projectdescription'])){
     newProject();
 } elseif (isset($_REQUEST['project'])) {
     if (isset($_REQUEST['tickettitle']) && isset($_REQUEST['tickettext'])) {
-        if (strlen(trim($_REQUEST['tickettitle'])) > 0 && strlen(trim($_REQUEST['tickettext'])) > 0 && strlen(trim($_REQUEST['tickettext'])) < 8192) {
+        if (strlen(trim($_REQUEST['tickettitle'])) > 0 && strlen(trim($_REQUEST['tickettext'])) > 0 && strlen(trim($_REQUEST['tickettext'])) < 8193) {
             createTicket((tagConv($_REQUEST['tickettitle'])), (tagConv($_REQUEST['tickettext'])), '0', trim($_REQUEST['project']));   
             
             getProject(trim($_REQUEST['project']));
@@ -70,6 +76,6 @@ if (isset($_REQUEST['projecttitle']) && isset($_REQUEST['projectdescription'])){
 //createTicket('Test Ticket','Das ist ein Testticket.',0,0);
 //getTickets();
 //==========CONTENT============
-echo "\n" . '  </body>' . "\n";
+echo "\n" . '  </div></body>' . "\n";
 echo '</html>' . "\n";
 

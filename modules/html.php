@@ -1,14 +1,19 @@
 <?php
 
 function head(){
-$css = 'original.css';
+//$css = 'original.css';
+$css = 'dark.css';
     echo '<!DOCTYPE html>' . "\n";
     echo '<html>' . "\n";
     echo '  <head>' . "\n";
     echo '      <link rel="stylesheet" href="style/'.$css.'">' . "\n";
     echo '      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>' . "\n";
     echo '      <script src="js/dr.js"></script>' . "\n";
-    echo '      <title>🥜 NutDB - Small Project Documentation Tool</title>' . "\n";
+    if (isset($_REQUEST['project'])) {
+        echo '      <title>🥜 NutDB - '.strip_tags(getProjectTitle($_REQUEST['project'])).'</title>' . "\n";
+    } else {
+        echo '      <title>🥜 NutDB - Small Project Documentation Tool</title>' . "\n";
+    }
     echo '      ' . "\n";
     echo '      ' . "\n";
     echo '      ' . "\n";
@@ -150,8 +155,8 @@ function editProject($id) {
 function help() {
     echo '<div class="ticket_form">' . "\n";
     echo '<div class="ticket_form_title">Help</div>' . "\n";
-    echo '' . "\n";
-    echo '' . "\n";
+    echo '<h1>NutDB</h1>' . "\n";
+    echo 'NutDB is a small project-overview application' . "\n";
     echo '' . "\n";
     echo '' . "\n";
     echo '' . "\n";

@@ -53,7 +53,7 @@
                 
                 
                 
-                $link = mysqli_connect($host, $user, "", $db);
+                $link = mysqli_connect($host, $user, $pass, $db);
                 if($link === false){
                     error("ERROR: Could not connect. " . mysqli_connect_error());
                 }
@@ -132,4 +132,9 @@
         ?>
         </div>
 </body>
-</html>
+</html><?php
+function error($string) {
+    die('      <div class="error">'.$string.'</div>'."\n" . '  </body>' . "\n" . '</html>' . "\n");
+    
+}
+?>

@@ -353,9 +353,9 @@ function listProjects() {
         while($row = $result->fetch_assoc()) {
             if (strtolower($row['status']) == 'hidden') {
             } elseif (strtolower($row['status']) == 'closed') {
-                echo '      <div class="project"><a href="?project='.$row['id'].'"><div class="project_title closed"><strike><span class="idtitle">#'.$row['id'].'</span>  '.substr($row['projectname'],0,150). '</strike> [' . $row['status'] . ']</div></a><br>', substr($row['description'], 0, 30) . '...</div>';
+                echo '      <a href="?project='.$row['id'].'"><div class="project_view"><div class="project_title closed"><strike><span class="idtitle">#'.$row['id'].'</span>  '.substr($row['projectname'],0,150). '</strike> [' . $row['status'] . ']</div><br>', substr(($row['description']), 0, 450) . '...</div></a>';
             } else {
-                echo '      <div class="project"><a href="?project='.$row['id'].'"><div class="project_title"><span class="idtitle">#'.$row['id'].'</span>  '.substr($row['projectname'],0,150). ' [' . $row['status'] . ']</div></a><br>', substr($row['description'], 0, 30) . '...</div>';
+                echo '      <a href="?project='.$row['id'].'"><div class="project_view"><div class="project_title"><span class="idtitle">#'.$row['id'].'</span>  '.substr($row['projectname'],0,150). ' [' . $row['status'] . ']</div><br>', substr(($row['description']), 0, 450) . '...</div></a>';
             }
         }
     } else {
