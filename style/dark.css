@@ -127,6 +127,9 @@ hr {
     font-size: 11pt;
     color: var(--contentblockcolor);
     transition: 0.1s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .project_view:hover {
     margin: 19px;
